@@ -3,8 +3,7 @@
 ## Installation
 
 1. Make sure you've installed the xUnit Plugin
-2. Get the `webui-to-junit.xsl` file onto your Hudson server(s)
-** I tend to use a Git Submodule to pull this repo into other projects
+2. Get the `webui-to-junit.xsl` file onto your Hudson server(s) - I tend to use a Git Submodule to pull this repo into other projects
 
 ## Usage
 
