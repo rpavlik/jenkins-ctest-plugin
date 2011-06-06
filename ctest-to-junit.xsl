@@ -16,13 +16,14 @@
 					<xsl:variable name="status" select="@Status"/>
 					<xsl:variable name="output" select="Measurement/Value"/>
 					<xsl:variable name="className" select="translate(Path, '/.', '.')"/>
-					<testcase classname="ctest{$className}"
+					<testcase classname="projectroot{$className}"
 						name="{$testName}"
 						time="{$duration}">
+						<system-out>
+							<xsl:value-of select="$output" />
+						</system-out>
 						<xsl:if test="@Status!='passed'">
-							<failure>
-								<xsl:value-of select="$output" />
-							</failure>
+							<failure message="{$status}" />
 						</xsl:if>
 					</testcase>
 				</xsl:for-each>
