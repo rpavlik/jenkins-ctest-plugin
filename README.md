@@ -12,6 +12,8 @@
 3. Specify the path to the `ctest-to-junit.xsl` stylesheet
 4. GO!
 
+You might want to look at `run-test-and-save.sh` to see one way of prompting CTest to generate XML output and then moving it. You can execute that script as a build step from your build directory, and then your "pattern" will be `BUILDDIR/CTestResults.xml`.
+
 ## License
 
 jenkins-ctest-plugin is covered under the MIT License. See LICENSE for more information.
