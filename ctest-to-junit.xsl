@@ -16,7 +16,7 @@
 					<xsl:variable name="status" select="@Status"/>
 					<xsl:variable name="output" select="Measurement/Value"/>
 					<xsl:variable name="className" select="translate(Path, '/.', '.')"/>
-					<testcase classname="{$className}"
+					<testcase classname="ctest{$className}"
 						name="{$testName}"
 						time="{$duration}">
 						<xsl:if test="@Status!='passed'">
