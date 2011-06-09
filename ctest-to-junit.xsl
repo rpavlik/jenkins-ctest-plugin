@@ -19,14 +19,14 @@
 					<testcase classname="projectroot{$className}"
 						name="{$testName}"
 						time="{$duration}">
-						<system-out>
-							<xsl:value-of select="$output" />
-						</system-out>
 						<xsl:if test="@Status!='passed'">
 							<failure>
 								<xsl:value-of select="$output" />
 							</failure>
 						</xsl:if>
+						<system-out>
+							<xsl:value-of select="$output" />
+						</system-out>
 					</testcase>
 				</xsl:for-each>
 			</testsuite>
