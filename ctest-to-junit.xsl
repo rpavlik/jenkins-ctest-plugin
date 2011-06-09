@@ -23,7 +23,9 @@
 							<xsl:value-of select="$output" />
 						</system-out>
 						<xsl:if test="@Status!='passed'">
-							<failure message="{$status}" />
+							<failure>
+								<xsl:value-of select="$output" />
+							</failure>
 						</xsl:if>
 					</testcase>
 				</xsl:for-each>
