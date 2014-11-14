@@ -8,10 +8,12 @@
 
 ## Using the Transform
 
-1. When configuring your Job, enable the xUnit Plugin and select the *Custom Tool* option.
+1. When configuring your Job, in *Post-build Actions*, add *Publish xUnit test result report*, and add the *Custom Tool* option. (Actually, since [this bug from May 2013][jenkins-issue], it looks like my XSL file is integrated with the plugin!)
+  - Specify the path to the [`ctest-to-junit.xsl`][xsl] stylesheet if you use Custom
 2. Specify a pattern for CTest files to transform.
-3. Specify the path to the [`ctest-to-junit.xsl`][xsl] stylesheet
-4. GO!
+3. GO!
+
+[jenkins-issue]:https://issues.jenkins-ci.org/browse/JENKINS-17884
 
 ## Running the Tests
 It takes a little finagling to get CTest to generate the XML output for consumption by this XSL.
