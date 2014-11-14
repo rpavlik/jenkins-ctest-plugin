@@ -14,9 +14,11 @@
 
 You might want to look at `run-test-and-save.sh` to see one way of prompting CTest to generate XML output and then moving it. You can execute that script as a build step from your build directory, and then your "pattern" will be `BUILDDIR/CTestResults.xml`.
 
+If you're on Windows, you can use the combo of batch file and PowerShell script: run `run-test-and-save.bat` which will have the same results. Note that if you're using a multi-config generator, you need to pass a configuration to this script (which will pass it on to CTest), something like `-C Debug`.
+
 ## License
 
-jenkins-ctest-plugin is covered under the MIT License. See LICENSE for more information.
+`jenkins-ctest-plugin` is covered under the MIT License. See LICENSE for more information.
 
 Based on [WebUI-plugin](https://github.com/versionone/webui-plugin "WebUI Plugin")
 
