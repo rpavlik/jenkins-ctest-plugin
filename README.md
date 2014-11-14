@@ -20,7 +20,9 @@ It takes a little finagling to get CTest to generate the XML output for consumpt
 You might want to look at [`run-test-and-save.sh`][sh] to see one way of prompting CTest to generate XML output and then moving it. You can execute that script as a build step from your build directory, and then your "pattern" will be `BUILDDIR/CTestResults.xml`.
 
 ### Windows
-If you're on Windows, you can use the PowerShell script (with batch file launcher): run [`run-test-and-save.bat`][bat] (which runs [`run-test-and-save.ps1`][ps1] for you) which will have the same results as the *nix shell script. Note that if you're using a multi-config generator (for example, Visual Studio), you need to pass a configuration to this script (which will pass it on to CTest), something like `-C Debug`.
+If you're on Windows, you can use the PowerShell script (with batch file launcher): run [`run-test-and-save.bat`][bat] (which runs [`run-test-and-save.ps1`][ps1] for you) which will have the same results as the *nix shell script.
+
+Note that if you're using a multi-config generator (for example, Visual Studio), you need to pass a configuration to this script (which will pass it on to CTest), something like `-C Debug`. To accommodate this, if you pass a config using `-C`, the config name will be prepended to the output XML filename, e.g. `Debug.CTestResults.xml`
 
 [xsl]: ctest-to-junit.xsl
 [sh]: run-test-and-save.sh
