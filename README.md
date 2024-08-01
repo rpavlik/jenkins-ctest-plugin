@@ -1,5 +1,12 @@
 # jenkins-ctest-plugin + [xUnit-plugin](http://wiki.jenkins-ci.org/display/JENKINS/xUnit+Plugin "xUnit Plugin") = CTest test reports in [Jenkins-CI](http://jenkins-ci.org/ "Extensible continuous integration server")
 
+## Project Status
+
+This was worthwhile and worked when I last used it.
+However, I have moved on, no longer use this or know if it is valuable, and have no capacity to meaningfully maintain it.
+
+**Unmaintained**
+
 ## Installation
 
 1. Make sure you've installed the xUnit Plugin in Jenkins.
